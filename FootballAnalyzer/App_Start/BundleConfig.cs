@@ -10,7 +10,9 @@ namespace FootballAnalyzer
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/football-scraper.js"));
+                        "~/Scripts/jquery-ui-{version}.js",
+                        "~/Scripts/football-scraper.js",
+                        "~/Scripts/DataTables/jquery.dataTables.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -23,7 +25,10 @@ namespace FootballAnalyzer
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/themes/base/jquery-ui.css",
+                      "~/Content/DataTables/css/dataTables.bootstrap.css",
+                      "~/Content/DataTables/css/jquery.dataTables.css"));
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model FootballAnalyzer.Models.RootObject
+
+@{
+    Layout = null;
+}
+
+<table class="table table-hover table-bordered table-condensed table-striped sortable-table">
+    <thead>
+        <tr>
+            <th>Game</th>
+            <th>Team Home</th>
+            <th>Team Away</th>
+            <th>Home Team to Win</th>
+            <th>Draw</th>
+            <th>Away Team to Win</th>
+            <th>Games Played</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+
+        @foreach (var game in Model.Games)
+            {
+            <tr class="game-data" data-head2head="@game._links.self.href">
+                <td>@(Model.Games.IndexOf(game)+1)</td>
+                <td>@game.homeTeamName</td>
+                <td>@game.awayTeamName</td>
+                <td class="home-team-to-win"></td>
+                <td class="draw"></td>
+                <td class="away-team-to-win"></td>
+                <td class="game-played"></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
