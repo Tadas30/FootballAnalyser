@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top ">
+    <div class="container">
+        <div class="navbar-header">
+        </div>
+        <img src="../../Content/Images/Logo.png" alt="Football Analyser Logo" style="margin-top: -75px" height="250" width="250"/>
+        <div class="navbar-collapse collapse">
+            <input type="text" class="pull-right form-control search-box" style="margin-top: -140px" placeholder="Search"/>
+        </div>
+    </div>
+</div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
